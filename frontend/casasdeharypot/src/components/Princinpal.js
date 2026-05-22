@@ -1,3 +1,4 @@
+import Pesquisar from "../pages/Pesquisar"
 function Princinpal(){
     return (
         <div>
