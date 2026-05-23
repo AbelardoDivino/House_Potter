@@ -1,5 +1,7 @@
 const env = require('dotenv').config()
 const mysql = require('mysql2')
+const expres = require('express')
+const app = expres()
 
 const conect =mysql.createConnection({
     host:"localhost",
@@ -16,3 +18,9 @@ conect.connect((err)=>{
         console.log("conectado")
     }
 })
+
+
+app.listen(3000,function(){
+    console.log('server running')
+})
+
