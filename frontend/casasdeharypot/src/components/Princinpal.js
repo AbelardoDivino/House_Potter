@@ -1,8 +1,9 @@
-import Pesquisar from "../pages/Pesquisar"
+import Pesquisar from '../pages/Pesquisar'
 function Princinpal(){
     return (
         <div>
-        Aba de pesquisa           
+        Aba de pesquisa 
+        <Pesquisar></Pesquisar>
         </div>
     )
 }

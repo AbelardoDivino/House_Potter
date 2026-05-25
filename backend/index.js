@@ -19,6 +19,7 @@ conect.connect((err)=>{
     }
 })
 
+const rotas = require('./rotas')
 
 app.listen(3000,function(){
     console.log('server running')
