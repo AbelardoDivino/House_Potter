@@ -1,14 +1,17 @@
-const env = require('dotenv').config()
+require('dotenv').config()
 const mysql = require('mysql2')
-const expres = require('express')
-const app = expres()
 
-const conect =mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"",
-    database:"casasharrypotter"
+const express = require('express')  // "expres" → "express"
+const app = express()
+
+
+const conect = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 })
+
 
 conect.connect((err)=>{
     if (err) {
@@ -20,6 +23,8 @@ conect.connect((err)=>{
 })
 
 const rotas = require('./rotas')
+
+app.use('/api', rotas)
 
 app.listen(3000,function(){
     console.log('server running')

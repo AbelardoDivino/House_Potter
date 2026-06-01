@@ -1,13 +1,21 @@
+import { useState, useEffect } from "react"
+import Grifinoria from '../components/Grifinoria'
+import Corvinal from '../components/Corvinal'
+import Saoserina from'../components/Saoserina'
+import Lufalufa from '../components/Lufalufa'
 function Pesquisar(){
+
+    const [texto,settexto] = useState("")
+    const [mostrar,setmostrar] = useState(false)
+
+    function pesquisarcasas(){
+        if (texto.toLocaleLowerCase&&texto.toLowerCase() === 'grifinoria') {
+            setmostrar(true)
+            return <Grifinoria></Grifinoria>
+        }
+    }
+
     return(
-        // <div>
-        //     <div>
-        //         <label>
-        //         <input type="text" placeholder="min 50 caracter">Digite o nome da casa</input>
-        //         <button>Pesquisar</button>
-        //         </label>
-        //     </div>
-        // </div>
    <div>
              <div>
                   <label>
