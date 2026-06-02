@@ -5,7 +5,7 @@ function Saoserina(){
     
     useEffect(()=>{
 fetch('http://localhost:3000/api/casas').then(res => res.json()).then(data => {
-    const grifif = data.find(h => h.name?.toLowerCase().includes('grifif'))
+    const grifif = data.find(h => h.name?.toLowerCase().includes('sonserina'))
     setcasa(grifif)
 })
     },[])
